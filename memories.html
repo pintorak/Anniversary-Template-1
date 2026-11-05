@@ -7,138 +7,111 @@
   <title>Our Memories ♡</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --blue: #c4dae8;
+      --butter: #feefb8;
+      --cocoa: #432f2e;
+      --cream: #fffaf0;
+    }
+
     * {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
+      padding: 30px 18px;
+
       min-height: 100vh;
 
-      background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,.75) 0 3px, transparent 4px),
-        radial-gradient(circle at 82% 35%, rgba(255,255,255,.7) 0 3px, transparent 4px),
-        #c4dae8;
+      background: var(--blue);
 
-      color: #432f2e;
+      color: var(--cocoa);
+
       font-family: "Mali", cursive;
     }
 
-    .top-menu {
-      width: fit-content;
-      margin: 28px auto 0;
-      padding: 10px 22px;
-
-      background: rgba(255,250,240,.9);
-
-      border: 2px solid rgba(67,47,46,.1);
-      border-radius: 999px;
-
-      box-shadow: 0 5px 0 rgba(67,47,46,.08);
-
-      font-family: "Quicksand", sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .page {
-      width: min(950px, 94vw);
-
-      margin: 45px auto 70px;
-
-      padding: 70px 45px 65px;
-
-      background: #fffaf0;
-
-      box-shadow:
-        0 18px 35px rgba(67,47,46,.15),
-        0 3px 0 rgba(67,47,46,.08);
-
-      transform: rotate(.35deg);
-
+    .paper {
       position: relative;
+
+      width: min(900px, 100%);
+
+      margin: 0 auto;
+
+      background: var(--cream);
+
+      padding: 55px 30px 60px;
+
+      box-shadow: 0 18px 40px rgba(67, 47, 46, 0.15);
+
+      transform: rotate(0.2deg);
     }
 
     .tape {
-      width: 110px;
-      height: 35px;
-
       position: absolute;
 
-      top: -17px;
+      top: -18px;
       left: 50%;
 
-      transform: translateX(-50%) rotate(-2deg);
+      transform: translateX(-50%) rotate(2deg);
 
-      background: rgba(254,239,184,.9);
+      width: 150px;
+      height: 38px;
+
+      background: rgba(254, 239, 184, 0.9);
     }
 
-    .title {
+    .label {
       text-align: center;
 
-      margin-bottom: 45px;
-    }
+      font-family: "Quicksand", sans-serif;
 
-    .title small {
-      color: #8a6860;
-      font-size: 14px;
+      font-size: 12px;
+
+      letter-spacing: 3px;
+
+      opacity: 0.55;
+
+      margin-bottom: 10px;
     }
 
     h1 {
-      margin: 8px 0 12px;
+      text-align: center;
 
-      font-size: clamp(38px, 7vw, 65px);
+      margin: 0 0 40px;
+
+      font-size: clamp(32px, 7vw, 52px);
 
       font-weight: 600;
     }
-
-    .yellow-line {
-      width: 120px;
-      height: 8px;
-
-      margin: auto;
-
-      background: #feefb8;
-
-      border-radius: 50%;
-
-      transform: rotate(-2deg);
-    }
-
-    /* PHOTO GRID */
 
     .memories {
       display: grid;
 
-      grid-template-columns:
-        repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
       gap: 28px;
 
-      align-items: start;
+      max-width: 760px;
+
+      margin: auto;
     }
 
     .memory {
-      background: #fff;
+      background: white;
 
-      padding: 12px 12px 20px;
+      padding: 10px 10px 22px;
 
-      box-shadow:
-        0 8px 18px rgba(67,47,46,.13);
-
-      position: relative;
+      box-shadow: 0 9px 22px rgba(67, 47, 46, 0.13);
     }
 
     .memory:nth-child(1) {
-      transform: rotate(-3deg);
+      transform: rotate(-2deg);
     }
 
     .memory:nth-child(2) {
@@ -146,92 +119,39 @@
     }
 
     .memory:nth-child(3) {
-      transform: rotate(-1deg);
+      transform: rotate(1deg);
     }
 
     .memory:nth-child(4) {
-      transform: rotate(2deg);
+      transform: rotate(-1.5deg);
     }
 
     .memory:nth-child(5) {
-      transform: rotate(-2deg);
+      transform: rotate(2deg);
     }
 
     .memory:nth-child(6) {
-      transform: rotate(3deg);
+      transform: rotate(-2deg);
     }
 
-    .photo {
+    .memory img {
+      display: block;
+
       width: 100%;
 
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 4 / 3;
 
-      background:
-        linear-gradient(
-          135deg,
-          #feefb8 0%,
-          #fffaf0 100%
-        );
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      color: #8a6860;
-
-      text-align: center;
-
-      font-size: 13px;
-
-      overflow: hidden;
-    }
-
-    .photo span {
-      padding: 15px;
+      object-fit: cover;
     }
 
     .caption {
-      text-align: center;
+      margin-top: 10px;
 
-      padding-top: 14px;
+      text-align: center;
 
       font-size: 14px;
 
-      line-height: 1.7;
-
-      color: #654945;
-    }
-
-    /* LITTLE TAPE */
-
-    .mini-tape {
-      position: absolute;
-
-      width: 70px;
-      height: 22px;
-
-      top: -11px;
-
-      left: 50%;
-
-      transform: translateX(-50%) rotate(-3deg);
-
-      background: rgba(254,239,184,.8);
-    }
-
-    /* BOTTOM */
-
-    .bottom-message {
-      text-align: center;
-
-      margin-top: 55px;
-
-      color: #8a6860;
-
-      font-size: 15px;
-
-      line-height: 2;
+      opacity: 0.65;
     }
 
     .next {
@@ -239,54 +159,38 @@
 
       width: fit-content;
 
-      margin: 28px auto 0;
+      margin: 45px auto 0;
 
-      padding: 12px 25px;
+      padding: 11px 23px;
 
-      background: #feefb8;
-
-      color: #432f2e;
-
-      text-decoration: none;
+      border: 1.5px solid var(--cocoa);
 
       border-radius: 999px;
 
-      box-shadow: 0 5px 0 #d9c98d;
+      color: var(--cocoa);
 
-      font-weight: 600;
+      text-decoration: none;
 
-      transition: .15s ease;
+      font-family: "Quicksand", sans-serif;
+
+      font-size: 13px;
+
+      transition: 0.2s;
     }
 
     .next:hover {
-      transform: translateY(-3px) rotate(-1deg);
+      background: var(--cocoa);
+
+      color: var(--cream);
     }
 
-    @media (max-width: 750px) {
-
-      .page {
-        padding: 60px 25px 55px;
+    @media (max-width: 600px) {
+      body {
+        padding: 18px 12px;
       }
 
-      .memories {
-        grid-template-columns:
-          repeat(2, 1fr);
-
-        gap: 24px;
-      }
-    }
-
-    @media (max-width: 500px) {
-
-      .top-menu {
-        margin-top: 18px;
-        font-size: 11px;
-        padding: 9px 17px;
-      }
-
-      .page {
-        width: 94vw;
-        padding: 55px 18px 50px;
+      .paper {
+        padding: 45px 18px 50px;
       }
 
       .memories {
@@ -294,180 +198,78 @@
 
         gap: 30px;
       }
-
-      .memory:nth-child(n) {
-        transform: rotate(-1deg);
-      }
-
-      .photo {
-        aspect-ratio: 4 / 3;
-      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="top-menu">
-    OUR LITTLE STORY ♡
-  </div>
-
-
-  <main class="page">
+  <main class="paper">
 
     <div class="tape"></div>
 
-
-    <div class="title">
-
-      <small>
-        little pieces of us
-      </small>
-
-      <h1>
-        Our Memories
-      </h1>
-
-      <div class="yellow-line"></div>
-
+    <div class="label">
+      LITTLE MOMENTS
     </div>
 
+    <h1>
+      Our Memories ♡
+    </h1>
 
     <div class="memories">
 
-
-      <!-- MEMORY 1 -->
-
       <div class="memory">
-
-        <div class="mini-tape"></div>
-
-        <div class="photo">
-          <span>
-            📷<br><br>
-            ใส่รูปของเรา<br>
-            ตรงนี้
-          </span>
-        </div>
+        <img src="assets/images/memory-01.jpg" alt="Our Memory 1">
 
         <div class="caption">
-          วันที่ฉันอยากจำไปนาน ๆ ♡
+          a little moment with you ♡
         </div>
-
       </div>
 
-
-      <!-- MEMORY 2 -->
-
       <div class="memory">
-
-        <div class="photo">
-          <span>
-            📷<br><br>
-            ใส่รูปของเรา<br>
-            ตรงนี้
-          </span>
-        </div>
+        <img src="assets/images/memory-02.jpg" alt="Our Memory 2">
 
         <div class="caption">
-          รอยยิ้มของเธอ
+          one of my favorite days
         </div>
-
       </div>
 
-
-      <!-- MEMORY 3 -->
-
       <div class="memory">
-
-        <div class="photo">
-          <span>
-            📷<br><br>
-            ใส่รูปของเรา<br>
-            ตรงนี้
-          </span>
-        </div>
+        <img src="assets/images/memory-03.jpg" alt="Our Memory 3">
 
         <div class="caption">
-          ความทรงจำเล็ก ๆ ที่แสนพิเศษ
+          just us
         </div>
-
       </div>
 
-
-      <!-- MEMORY 4 -->
-
       <div class="memory">
-
-        <div class="mini-tape"></div>
-
-        <div class="photo">
-          <span>
-            📷<br><br>
-            ใส่รูปของเรา<br>
-            ตรงนี้
-          </span>
-        </div>
+        <img src="assets/images/memory-04.jpg" alt="Our Memory 4">
 
         <div class="caption">
-          อยู่ด้วยกันแล้วมีความสุขจัง
+          another little memory ♡
         </div>
-
       </div>
 
-
-      <!-- MEMORY 5 -->
-
       <div class="memory">
-
-        <div class="photo">
-          <span>
-            📷<br><br>
-            ใส่รูปของเรา<br>
-            ตรงนี้
-          </span>
-        </div>
+        <img src="assets/images/memory-05.jpg" alt="Our Memory 5">
 
         <div class="caption">
-          อีกหนึ่งวันที่อยากเก็บไว้
+          moments I want to keep
         </div>
-
       </div>
 
-
-      <!-- MEMORY 6 -->
-
       <div class="memory">
-
-        <div class="photo">
-          <span>
-            📷<br><br>
-            ใส่รูปของเรา<br>
-            ตรงนี้
-          </span>
-        </div>
+        <img src="assets/images/memory-06.jpg" alt="Our Memory 6">
 
         <div class="caption">
-          และจะมีความทรงจำใหม่ ๆ อีกเยอะเลย ♡
+          always worth remembering ♡
         </div>
-
       </div>
 
     </div>
 
-
-    <div class="bottom-message">
-
-      รูปอาจจะเป็นเพียงภาพหนึ่งใบ<br>
-      แต่สำหรับฉัน ทุกภาพมีเรื่องราวของเราอยู่ข้างใน
-
-    </div>
-
-
-    <a
-      href="letter.html"
-      class="next">
-      ไปอ่านข้อความจากฉัน ♡
+    <a href="letter.html" class="next">
+      ไปต่อ → Love Letter
     </a>
 
   </main>
