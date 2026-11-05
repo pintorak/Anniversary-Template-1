@@ -9,12 +9,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --blue: #c4dae8;
+      --butter: #feefb8;
+      --cocoa: #432f2e;
+      --cream: #fffaf0;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -22,278 +26,165 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,.8) 0 3px, transparent 4px),
-        radial-gradient(circle at 80% 30%, rgba(255,255,255,.7) 0 3px, transparent 4px),
-        #c4dae8;
-      color: #432f2e;
+      background: var(--blue);
+      color: var(--cocoa);
       font-family: "Mali", cursive;
-      overflow-x: hidden;
-    }
 
-    /* ---------- TOP MENU ---------- */
-
-    .top-menu {
-      width: fit-content;
-      margin: 28px auto 0;
-      padding: 10px 22px;
-
-      background: rgba(255,250,240,.88);
-      border: 2px solid rgba(67,47,46,.12);
-      border-radius: 999px;
-
-      box-shadow: 0 5px 0 rgba(67,47,46,.08);
-
-      font-family: "Quicksand", sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: .5px;
-    }
-
-    /* ---------- MAIN ---------- */
-
-    .page {
-      min-height: calc(100vh - 80px);
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 45px 20px 70px;
+      align-items: center;
+
+      padding: 25px;
     }
 
     .paper {
       position: relative;
 
-      width: min(760px, 94vw);
-      min-height: 560px;
+      width: min(760px, 100%);
 
-      background: #fffaf0;
+      background: var(--cream);
 
-      padding: 70px 50px 60px;
+      padding: 45px 35px 55px;
 
-      transform: rotate(-0.6deg);
+      text-align: center;
 
       box-shadow:
-        0 18px 35px rgba(67,47,46,.15),
-        0 3px 0 rgba(67,47,46,.08);
+        0 18px 40px rgba(67, 47, 46, 0.15),
+        0 3px 0 rgba(67, 47, 46, 0.08);
 
-      border: 1px solid rgba(67,47,46,.08);
+      transform: rotate(-0.5deg);
     }
-
-    /* ---------- TAPE ---------- */
 
     .tape {
       position: absolute;
-      width: 105px;
-      height: 34px;
-
-      background: rgba(254,239,184,.88);
-
-      top: -16px;
+      top: -17px;
       left: 50%;
 
       transform: translateX(-50%) rotate(-2deg);
 
-      box-shadow: 0 2px 5px rgba(67,47,46,.08);
+      width: 150px;
+      height: 38px;
+
+      background: rgba(254, 239, 184, 0.9);
     }
 
-    /* ---------- DECORATIONS ---------- */
-
-    .doodle {
-      position: absolute;
+    .label {
       font-family: "Quicksand", sans-serif;
-      color: #8a6860;
-      opacity: .7;
-      pointer-events: none;
+
+      font-size: 12px;
+      letter-spacing: 3px;
+
+      opacity: 0.55;
+
+      margin-bottom: 25px;
     }
 
-    .heart {
-      top: 45px;
-      right: 45px;
-      font-size: 28px;
-      transform: rotate(12deg);
-    }
+    .photo {
+      width: min(420px, 90%);
+      margin: 0 auto 28px;
 
-    .star {
-      bottom: 45px;
-      left: 42px;
-      font-size: 22px;
-      transform: rotate(-10deg);
-    }
+      padding: 10px 10px 30px;
 
-    .tiny {
-      top: 95px;
-      left: 42px;
-      font-size: 15px;
-    }
+      background: white;
 
-    /* ---------- CONTENT ---------- */
-
-    .content {
-      text-align: center;
-      max-width: 570px;
-      margin: 0 auto;
-    }
-
-    .small-text {
-      font-size: 14px;
-      color: #80615c;
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      margin: 0;
-
-      font-family: "Mali", cursive;
-      font-size: clamp(32px, 6vw, 58px);
-      font-weight: 600;
-
-      line-height: 1.35;
-
-      color: #432f2e;
-    }
-
-    .underline {
-      width: 105px;
-      height: 8px;
-
-      margin: 18px auto 28px;
-
-      background: #feefb8;
-
-      border-radius: 50%;
+      box-shadow: 0 10px 25px rgba(67, 47, 46, 0.13);
 
       transform: rotate(-2deg);
     }
 
-    .question {
-      font-size: clamp(18px, 3vw, 25px);
-      line-height: 1.9;
+    .photo img {
+      display: block;
 
-      margin: 0 auto 38px;
+      width: 100%;
+      aspect-ratio: 4 / 3;
 
-      color: #654945;
+      object-fit: cover;
     }
 
-    /* ---------- BUTTONS ---------- */
+    .photo-caption {
+      margin-top: 10px;
+
+      font-size: 13px;
+
+      opacity: 0.55;
+    }
+
+    h1 {
+      margin: 10px 0 5px;
+
+      font-size: clamp(30px, 7vw, 52px);
+
+      font-weight: 600;
+
+      line-height: 1.25;
+    }
+
+    .question {
+      margin: 0 0 28px;
+
+      font-size: clamp(17px, 4vw, 22px);
+
+      opacity: 0.8;
+    }
 
     .buttons {
       display: flex;
+
       justify-content: center;
       align-items: center;
-      gap: 18px;
 
-      min-height: 65px;
+      gap: 14px;
 
-      position: relative;
+      min-height: 60px;
     }
 
     button {
       border: 0;
-      outline: none;
 
-      font-family: "Mali", cursive;
-      font-size: 16px;
-      font-weight: 600;
-
-      padding: 12px 25px;
+      padding: 12px 24px;
 
       border-radius: 999px;
 
+      font-family: "Mali", cursive;
+
+      font-size: 15px;
+
       cursor: pointer;
 
-      transition:
-        transform .15s ease,
-        box-shadow .15s ease;
+      transition: transform 0.15s;
     }
 
     .yes {
-      background: #feefb8;
-      color: #432f2e;
-
-      box-shadow:
-        0 5px 0 #d9c98d,
-        0 8px 14px rgba(67,47,46,.1);
-
-      position: relative;
-      z-index: 10;
+      background: var(--butter);
+      color: var(--cocoa);
     }
 
     .yes:hover {
-      transform: translateY(-3px) rotate(-1deg);
-    }
-
-    .yes:active {
-      transform: translateY(2px);
-      box-shadow: 0 2px 0 #d9c98d;
+      transform: scale(1.05);
     }
 
     .no {
-      background: #c4dae8;
-      color: #432f2e;
-
-      box-shadow:
-        0 5px 0 #9eb9c9,
-        0 8px 14px rgba(67,47,46,.08);
-
       position: relative;
-      z-index: 20;
+
+      background: #eee1dd;
+      color: var(--cocoa);
     }
 
-    /* ---------- BOTTOM ---------- */
-
-    .bottom-note {
-      margin-top: 38px;
-
-      font-family: "Quicksand", sans-serif;
-      font-size: 12px;
-
-      color: #967b76;
-      letter-spacing: 1px;
+    .no:hover {
+      position: fixed;
     }
 
-    /* ---------- MOBILE ---------- */
-
-    @media (max-width: 600px) {
-      .top-menu {
-        margin-top: 18px;
-        font-size: 11px;
-        padding: 9px 17px;
-      }
-
-      .page {
-        padding: 35px 14px 50px;
+    @media (max-width: 500px) {
+      body {
+        padding: 15px;
       }
 
       .paper {
-        width: 95vw;
-        min-height: 500px;
-        padding: 65px 25px 45px;
+        padding: 40px 20px 45px;
       }
 
-      .heart {
-        right: 25px;
-        top: 35px;
-      }
-
-      .tiny {
-        left: 25px;
-      }
-
-      .star {
-        left: 25px;
-      }
-
-      .question {
-        margin-bottom: 30px;
-      }
-
-      .buttons {
-        gap: 12px;
-      }
-
-      button {
-        font-size: 14px;
-        padding: 11px 20px;
+      .photo {
+        width: 95%;
       }
     }
   </style>
@@ -301,116 +192,67 @@
 
 <body>
 
-  <!-- TOP MENU -->
-  <div class="top-menu">
-    OUR LITTLE STORY ♡
-  </div>
+  <main class="paper">
 
-  <!-- PAGE -->
-  <main class="page">
+    <div class="tape"></div>
 
-    <div class="paper">
+    <div class="label">
+      OUR LITTLE STORY ♡
+    </div>
 
-      <div class="tape"></div>
+    <div class="photo">
+      <img src="assets/images/hero.jpg" alt="Our photo">
 
-      <div class="doodle heart">♡</div>
-      <div class="doodle tiny">✦</div>
-      <div class="doodle star">☆</div>
-
-      <div class="content">
-
-        <div class="small-text">
-          a little message from me to you
-        </div>
-
-        <h1>
-          เรามีอะไรจะบอก
-        </h1>
-
-        <div class="underline"></div>
-
-        <p class="question">
-          อยากรู้ไหม?
-        </p>
-
-        <div class="buttons">
-
-          <button
-            class="yes"
-            onclick="goNext()">
-            อยากรู้สิ ♡
-          </button>
-
-          <button
-            class="no"
-            id="noButton">
-            ไม่
-          </button>
-
-        </div>
-
-        <div class="bottom-note">
-          made with a little bit of love
-        </div>
-
+      <div class="photo-caption">
+        a little piece of us ♡
       </div>
+    </div>
+
+    <h1>
+      เรามีอะไรจะบอก
+    </h1>
+
+    <p class="question">
+      อยากรู้ไหม?
+    </p>
+
+    <div class="buttons">
+
+      <button class="yes" onclick="goNext()">
+        อยากรู้สิ ♡
+      </button>
+
+      <button class="no" id="noButton">
+        ไม่
+      </button>
+
     </div>
 
   </main>
 
   <script>
-    /* YES BUTTON */
     function goNext() {
       window.location.href = "anniversary.html";
     }
 
-
-    /* RUNAWAY NO BUTTON */
-
     const noButton = document.getElementById("noButton");
 
-    function moveNoButton() {
+    function moveButton() {
+      const maxX = window.innerWidth - noButton.offsetWidth - 20;
+      const maxY = window.innerHeight - noButton.offsetHeight - 20;
 
-      const padding = 15;
-
-      const maxX =
-        window.innerWidth -
-        noButton.offsetWidth -
-        padding;
-
-      const maxY =
-        window.innerHeight -
-        noButton.offsetHeight -
-        padding;
-
-      const x = Math.max(
-        padding,
-        Math.random() * maxX
-      );
-
-      const y = Math.max(
-        padding,
-        Math.random() * maxY
-      );
+      const x = Math.max(10, Math.random() * maxX);
+      const y = Math.max(10, Math.random() * maxY);
 
       noButton.style.position = "fixed";
       noButton.style.left = x + "px";
       noButton.style.top = y + "px";
     }
 
-    noButton.addEventListener("mouseenter", moveNoButton);
-
-    noButton.addEventListener("touchstart", function(event) {
-      event.preventDefault();
-      moveNoButton();
-    });
-
-    noButton.addEventListener("click", function(event) {
-      event.preventDefault();
-      moveNoButton();
-    });
+    noButton.addEventListener("mouseenter", moveButton);
+    noButton.addEventListener("touchstart", moveButton);
+    noButton.addEventListener("click", moveButton);
   </script>
 
 </body>
 </html>
-
