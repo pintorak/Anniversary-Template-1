@@ -8,13 +8,16 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --blue: #c4dae8;
+      --butter: #feefb8;
+      --cocoa: #432f2e;
+      --cream: #fffaf0;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -22,469 +25,142 @@
     body {
       margin: 0;
       min-height: 100vh;
-
       background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,.75) 0 3px, transparent 4px),
-        radial-gradient(circle at 85% 35%, rgba(255,255,255,.7) 0 3px, transparent 4px),
-        #c4dae8;
-
-      color: #432f2e;
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.6) 0 2px, transparent 3px),
+        var(--blue);
+      color: var(--cocoa);
       font-family: "Mali", cursive;
-    }
-
-    .top-menu {
-      width: fit-content;
-      margin: 28px auto 0;
-      padding: 10px 22px;
-
-      background: rgba(255,250,240,.9);
-
-      border: 2px solid rgba(67,47,46,.1);
-      border-radius: 999px;
-
-      box-shadow: 0 5px 0 rgba(67,47,46,.08);
-
-      font-family: "Quicksand", sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .page {
-      min-height: calc(100vh - 80px);
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 45px 20px 70px;
+      padding: 40px 20px;
     }
 
     .paper {
+      max-width: 760px;
+      margin: auto;
+      background: var(--cream);
+      padding: 45px 25px 55px;
+      border-radius: 8px;
+      box-shadow: 0 15px 40px rgba(67,47,46,.18);
       position: relative;
-
-      width: min(760px, 94vw);
-
-      min-height: 650px;
-
-      padding: 65px 40px 60px;
-
-      background: #fffaf0;
-
-      box-shadow:
-        0 18px 35px rgba(67,47,46,.15),
-        0 3px 0 rgba(67,47,46,.08);
-
-      transform: rotate(.4deg);
     }
 
     .tape {
       position: absolute;
-
-      width: 110px;
-      height: 35px;
-
-      top: -17px;
+      width: 120px;
+      height: 32px;
+      background: rgba(254,239,184,.85);
+      top: -15px;
       left: 50%;
-
       transform: translateX(-50%) rotate(-2deg);
-
-      background: rgba(254,239,184,.9);
     }
 
-    .title {
+    .top {
       text-align: center;
-
-      margin-bottom: 30px;
-    }
-
-    .title small {
-      color: #8a6860;
-      font-size: 14px;
+      font-family: "Quicksand", sans-serif;
+      font-size: 13px;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
     }
 
     h1 {
-      margin: 8px 0 12px;
-
-      font-size: clamp(38px, 7vw, 65px);
-
+      text-align: center;
+      margin: 5px 0;
+      font-size: 38px;
       font-weight: 600;
     }
 
-    .yellow-line {
-      width: 115px;
-      height: 8px;
-
-      margin: auto;
-
-      background: #feefb8;
-
-      border-radius: 50%;
-
-      transform: rotate(-2deg);
-    }
-
-    .song-name {
+    .subtitle {
       text-align: center;
-
-      margin: 0 0 28px;
-
-      font-size: 19px;
-
-      color: #654945;
-    }
-
-    /* VINYL */
-
-    .record-area {
-      position: relative;
-
-      width: 290px;
-      height: 290px;
-
-      margin: 0 auto 35px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .vinyl {
-      width: 270px;
-      height: 270px;
-
-      border-radius: 50%;
-
-      background:
-        repeating-radial-gradient(
-          circle,
-          #432f2e 0px,
-          #432f2e 2px,
-          #2e211f 3px,
-          #432f2e 5px
-        );
-
-      box-shadow:
-        0 12px 20px rgba(67,47,46,.25);
-
-      position: relative;
-
-      animation: spin 5s linear infinite;
-
-      animation-play-state: paused;
-    }
-
-    .vinyl.playing {
-      animation-play-state: running;
-    }
-
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
+      font-size: 16px;
+      margin-bottom: 35px;
     }
 
     .album {
-      position: absolute;
-
-      width: 105px;
-      height: 105px;
-
-      left: 50%;
-      top: 50%;
-
-      transform: translate(-50%, -50%);
-
-      border-radius: 50%;
-
-      background:
-        #feefb8;
-
-      border: 5px solid #fffaf0;
-
-      overflow: hidden;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      font-size: 11px;
-
-      color: #80615c;
-
-      text-align: center;
+      width: 260px;
+      margin: 0 auto 30px;
+      padding: 14px;
+      background: white;
+      box-shadow: 0 10px 25px rgba(67,47,46,.2);
+      transform: rotate(-2deg);
     }
 
     .album img {
+      display: block;
       width: 100%;
-      height: 100%;
-
+      aspect-ratio: 1 / 1;
       object-fit: cover;
-
-      display: none;
     }
 
-    .center-hole {
-      position: absolute;
-
-      width: 10px;
-      height: 10px;
-
-      background: #fffaf0;
-
-      border-radius: 50%;
-
-      left: 50%;
-      top: 50%;
-
-      transform: translate(-50%, -50%);
-
-      z-index: 5;
-    }
-
-    /* TONE ARM */
-
-    .tonearm {
-      position: absolute;
-
-      width: 100px;
-      height: 8px;
-
-      background: #80615c;
-
-      top: 25px;
-      right: -5px;
-
-      transform-origin: right center;
-
-      transform: rotate(-28deg);
-
-      border-radius: 10px;
-
-      transition: transform .35s ease;
-
-      z-index: 10;
-    }
-
-    .tonearm::before {
-      content: "";
-
-      position: absolute;
-
-      width: 25px;
-      height: 25px;
-
-      right: -7px;
-      top: -9px;
-
-      border-radius: 50%;
-
-      background: #432f2e;
-    }
-
-    .tonearm.playing {
-      transform: rotate(-10deg);
-    }
-
-    /* CONTROLS */
-
-    .controls {
+    .player {
       max-width: 500px;
-
       margin: auto;
-
       text-align: center;
     }
 
-    .play {
-      width: 58px;
-      height: 58px;
-
-      padding: 0;
-
-      border: 0;
-
-      border-radius: 50%;
-
-      background: #feefb8;
-
-      color: #432f2e;
-
-      font-size: 20px;
-
-      cursor: pointer;
-
-      box-shadow: 0 5px 0 #d9c98d;
-
-      transition: .15s ease;
+    .song-name {
+      font-size: 21px;
+      font-weight: 600;
+      margin-bottom: 18px;
     }
 
-    .play:hover {
-      transform: translateY(-3px);
-    }
-
-    .progress {
-      width: 100%;
-
-      margin-top: 24px;
-
-      appearance: none;
-
-      height: 6px;
-
+    button {
+      border: none;
+      background: var(--butter);
+      color: var(--cocoa);
+      font-family: "Mali", cursive;
+      font-size: 17px;
+      padding: 10px 25px;
       border-radius: 999px;
-
-      background: #c4dae8;
-
       cursor: pointer;
     }
 
-    .progress::-webkit-slider-thumb {
-      appearance: none;
+    button:hover {
+      transform: translateY(-2px);
+    }
 
-      width: 16px;
-      height: 16px;
-
-      border-radius: 50%;
-
-      background: #432f2e;
-
-      cursor: pointer;
+    input[type="range"] {
+      width: 100%;
+      margin: 20px 0 8px;
     }
 
     .time {
       display: flex;
-
       justify-content: space-between;
-
-      margin-top: 7px;
-
       font-family: "Quicksand", sans-serif;
-
-      font-size: 11px;
-
-      color: #8a6860;
-    }
-
-    .volume-row {
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      gap: 10px;
-
-      margin-top: 18px;
-
-      font-size: 12px;
-
-      color: #80615c;
-    }
-
-    .volume {
-      width: 100px;
-
-      appearance: none;
-
-      height: 5px;
-
-      border-radius: 999px;
-
-      background: #c4dae8;
-
-      cursor: pointer;
-    }
-
-    .volume::-webkit-slider-thumb {
-      appearance: none;
-
-      width: 14px;
-      height: 14px;
-
-      border-radius: 50%;
-
-      background: #432f2e;
-    }
-
-    .note {
-      margin-top: 30px;
-
-      text-align: center;
-
-      color: #8a6860;
-
       font-size: 13px;
     }
 
-    .next {
-      display: block;
-
-      width: fit-content;
-
-      margin: 32px auto 0;
-
-      padding: 12px 25px;
-
-      background: #feefb8;
-
-      color: #432f2e;
-
-      text-decoration: none;
-
-      border-radius: 999px;
-
-      box-shadow: 0 5px 0 #d9c98d;
-
-      font-weight: 600;
-
-      transition: .15s ease;
+    .volume {
+      margin-top: 15px;
     }
 
-    .next:hover {
-      transform: translateY(-3px);
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: var(--cocoa);
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .back:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
-
-      .top-menu {
-        margin-top: 18px;
-
-        font-size: 11px;
-
-        padding: 9px 17px;
-      }
-
-      .page {
-        padding: 40px 14px 55px;
+      body {
+        padding: 25px 12px;
       }
 
       .paper {
-        width: 95vw;
-
-        padding: 55px 22px 50px;
+        padding: 35px 18px 45px;
       }
 
-      .record-area {
-        width: 250px;
-        height: 250px;
-      }
-
-      .vinyl {
-        width: 230px;
-        height: 230px;
+      h1 {
+        font-size: 30px;
       }
 
       .album {
-        width: 90px;
-        height: 90px;
-      }
-
-      .tonearm {
-        right: -15px;
+        width: 220px;
       }
     }
   </style>
@@ -492,295 +168,121 @@
 
 <body>
 
-  <div class="top-menu">
-    OUR LITTLE STORY ♡
-  </div>
+  <div class="paper">
 
+    <div class="tape"></div>
 
-  <main class="page">
+    <div class="top">OUR LITTLE STORY ♡</div>
 
-    <div class="paper">
+    <h1>Our Song</h1>
 
-      <div class="tape"></div>
+    <div class="subtitle">
+      เพลงที่ทำให้ฉันนึกถึงเธอเสมอ
+    </div>
 
+    <div class="album">
+      <img src="assets/music/album-cover.jpg" alt="Our Song Album Cover">
+    </div>
 
-      <div class="title">
-
-        <small>
-          the song that reminds me of you
-        </small>
-
-        <h1>
-          Our Song
-        </h1>
-
-        <div class="yellow-line"></div>
-
-      </div>
-
+    <div class="player">
 
       <div class="song-name">
-        เพลงของเรา ♡
+        Our Song ♡
       </div>
 
+      <audio id="audio" src="assets/music/our-song.mp3"></audio>
 
-      <div class="record-area">
+      <button id="playBtn">▶ Play</button>
 
-        <div
-          class="vinyl"
-          id="vinyl">
+      <input
+        type="range"
+        id="progress"
+        min="0"
+        max="100"
+        value="0"
+      >
 
-          <div
-            class="album"
-            id="album">
-
-            <span id="albumText">
-              ใส่รูป<br>
-              Album Cover
-            </span>
-
-            <img
-              id="albumImage"
-              src="assets/music/album-cover.jpg"
-              alt="Album Cover">
-
-          </div>
-
-          <div class="center-hole"></div>
-
-        </div>
-
-
-        <div
-          class="tonearm"
-          id="tonearm">
-        </div>
-
+      <div class="time">
+        <span id="current">0:00</span>
+        <span id="duration">0:00</span>
       </div>
 
-
-      <div class="controls">
-
-        <button
-          class="play"
-          id="playButton">
-          ▶
-        </button>
-
-
-        <audio
-          id="audio"
-          src="assets/music/our-song.mp3">
-        </audio>
-
-
+      <div class="volume">
+        🔊
         <input
-          class="progress"
-          id="progress"
           type="range"
+          id="volume"
           min="0"
-          max="100"
-          value="0">
-
-
-        <div class="time">
-
-          <span id="currentTime">
-            0:00
-          </span>
-
-          <span id="duration">
-            0:00
-          </span>
-
-        </div>
-
-
-        <div class="volume-row">
-
-          <span>
-            🔊
-          </span>
-
-          <input
-            class="volume"
-            id="volume"
-            type="range"
-            min="0"
-            max="1"
-            step="0.01"
-            value="0.8">
-
-        </div>
-
+          max="1"
+          step="0.01"
+          value="1"
+        >
       </div>
-
-
-      <div class="note">
-        เพลงนี้อาจเป็นแค่เพลงหนึ่งเพลง<br>
-        แต่สำหรับฉัน มันจะเป็นเพลงของเราเสมอ ♡
-      </div>
-
-
-      <a
-        href="ending.html"
-        class="next">
-        ไปหน้าสุดท้ายของเรา ♡
-      </a>
 
     </div>
 
-  </main>
+    <a class="back" href="ending.html">
+      ไปหน้าสุดท้าย ♡
+    </a>
 
+  </div>
 
   <script>
-
-    const audio =
-      document.getElementById("audio");
-
-    const playButton =
-      document.getElementById("playButton");
-
-    const vinyl =
-      document.getElementById("vinyl");
-
-    const tonearm =
-      document.getElementById("tonearm");
-
-    const progress =
-      document.getElementById("progress");
-
-    const currentTime =
-      document.getElementById("currentTime");
-
-    const duration =
-      document.getElementById("duration");
-
-    const volume =
-      document.getElementById("volume");
-
+    const audio = document.getElementById("audio");
+    const playBtn = document.getElementById("playBtn");
+    const progress = document.getElementById("progress");
+    const current = document.getElementById("current");
+    const duration = document.getElementById("duration");
+    const volume = document.getElementById("volume");
 
     function formatTime(seconds) {
+      if (isNaN(seconds)) return "0:00";
 
-      if (isNaN(seconds)) {
-        return "0:00";
-      }
+      const min = Math.floor(seconds / 60);
+      const sec = Math.floor(seconds % 60)
+        .toString()
+        .padStart(2, "0");
 
-      const minutes =
-        Math.floor(seconds / 60);
-
-      const secs =
-        Math.floor(seconds % 60)
-          .toString()
-          .padStart(2, "0");
-
-      return `${minutes}:${secs}`;
+      return `${min}:${sec}`;
     }
 
-
-    playButton.addEventListener(
-      "click",
-      function () {
-
-        if (audio.paused) {
-
-          audio.play();
-
-          vinyl.classList.add("playing");
-
-          tonearm.classList.add("playing");
-
-          playButton.textContent = "❚❚";
-
-        } else {
-
-          audio.pause();
-
-          vinyl.classList.remove("playing");
-
-          tonearm.classList.remove("playing");
-
-          playButton.textContent = "▶";
-
-        }
-
+    playBtn.addEventListener("click", function () {
+      if (audio.paused) {
+        audio.play();
+        playBtn.textContent = "❚❚ Pause";
+      } else {
+        audio.pause();
+        playBtn.textContent = "▶ Play";
       }
-    );
+    });
 
+    audio.addEventListener("loadedmetadata", function () {
+      duration.textContent = formatTime(audio.duration);
+    });
 
-    audio.addEventListener(
-      "loadedmetadata",
-      function () {
-
-        duration.textContent =
-          formatTime(audio.duration);
-
+    audio.addEventListener("timeupdate", function () {
+      if (audio.duration) {
+        progress.value = (audio.currentTime / audio.duration) * 100;
       }
-    );
 
+      current.textContent = formatTime(audio.currentTime);
+    });
 
-    audio.addEventListener(
-      "timeupdate",
-      function () {
-
-        currentTime.textContent =
-          formatTime(audio.currentTime);
-
-        if (audio.duration) {
-
-          progress.value =
-            (audio.currentTime / audio.duration) * 100;
-
-        }
-
+    progress.addEventListener("input", function () {
+      if (audio.duration) {
+        audio.currentTime =
+          (progress.value / 100) * audio.duration;
       }
-    );
+    });
 
+    volume.addEventListener("input", function () {
+      audio.volume = volume.value;
+    });
 
-    progress.addEventListener(
-      "input",
-      function () {
-
-        if (audio.duration) {
-
-          audio.currentTime =
-            (progress.value / 100) * audio.duration;
-
-        }
-
-      }
-    );
-
-
-    volume.addEventListener(
-      "input",
-      function () {
-
-        audio.volume =
-          volume.value;
-
-      }
-    );
-
-
-    audio.addEventListener(
-      "ended",
-      function () {
-
-        vinyl.classList.remove("playing");
-
-        tonearm.classList.remove("playing");
-
-        playButton.textContent = "▶";
-
-        progress.value = 0;
-
-      }
-    );
-
-
-    audio.volume = 0.8;
-
+    audio.addEventListener("ended", function () {
+      playBtn.textContent = "▶ Play";
+      progress.value = 0;
+    });
   </script>
 
 </body>
