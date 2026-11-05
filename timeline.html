@@ -9,126 +9,127 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --blue: #c4dae8;
+      --butter: #feefb8;
+      --cocoa: #432f2e;
+      --cream: #fffaf0;
+    }
+
     * {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      background: #c4dae8;
-      color: #432f2e;
+      padding: 35px 18px;
+
+      background: var(--blue);
+
+      color: var(--cocoa);
+
       font-family: "Mali", cursive;
     }
 
-    .top-menu {
-      width: fit-content;
-      margin: 28px auto 0;
-      padding: 10px 22px;
+    .paper {
+      position: relative;
 
-      background: rgba(255,250,240,.9);
-      border: 2px solid rgba(67,47,46,.1);
-      border-radius: 999px;
+      width: min(850px, 100%);
 
-      box-shadow: 0 5px 0 rgba(67,47,46,.08);
+      margin: 0 auto;
 
-      font-family: "Quicksand", sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-    }
+      background: var(--cream);
 
-    .page {
-      width: min(900px, 94vw);
-      margin: 45px auto 70px;
-      padding: 65px 45px;
+      padding: 55px 35px 60px;
 
-      background: #fffaf0;
+      box-shadow: 0 18px 40px rgba(67, 47, 46, 0.15);
 
-      box-shadow:
-        0 18px 35px rgba(67,47,46,.15),
-        0 3px 0 rgba(67,47,46,.08);
-
-      transform: rotate(-.4deg);
+      transform: rotate(-0.3deg);
     }
 
     .tape {
-      width: 110px;
-      height: 35px;
+      position: absolute;
 
-      background: rgba(254,239,184,.9);
+      top: -18px;
+      left: 50%;
 
-      margin: -82px auto 35px;
+      transform: translateX(-50%) rotate(-2deg);
 
-      transform: rotate(-2deg);
+      width: 150px;
+      height: 38px;
+
+      background: rgba(254, 239, 184, 0.9);
     }
 
-    .title {
+    .label {
       text-align: center;
-      margin-bottom: 50px;
-    }
 
-    .title small {
-      color: #8a6860;
-      font-size: 14px;
+      font-family: "Quicksand", sans-serif;
+
+      font-size: 12px;
+
+      letter-spacing: 3px;
+
+      opacity: 0.55;
+
+      margin-bottom: 10px;
     }
 
     h1 {
-      margin: 8px 0 12px;
+      text-align: center;
 
-      font-size: clamp(38px, 7vw, 65px);
+      margin: 0 0 45px;
+
+      font-size: clamp(32px, 7vw, 52px);
+
       font-weight: 600;
-    }
-
-    .yellow-line {
-      width: 120px;
-      height: 8px;
-      margin: auto;
-
-      background: #feefb8;
-      border-radius: 50%;
-
-      transform: rotate(-2deg);
     }
 
     .timeline {
       position: relative;
-      max-width: 720px;
+
+      max-width: 700px;
+
       margin: auto;
     }
 
     .timeline::before {
       content: "";
+
       position: absolute;
 
       left: 50%;
+
       top: 0;
       bottom: 0;
 
-      width: 3px;
+      width: 2px;
 
-      background: #c4dae8;
+      background: rgba(67, 47, 46, 0.2);
 
       transform: translateX(-50%);
     }
 
     .item {
-      width: 50%;
-      padding: 0 35px 55px;
       position: relative;
+
+      width: 50%;
+
+      padding: 0 35px 55px;
     }
 
     .item:nth-child(odd) {
       margin-right: auto;
+
       text-align: right;
     }
 
     .item:nth-child(even) {
-      margin-left: 50%;
+      margin-left: auto;
+
       text-align: left;
     }
 
@@ -137,86 +138,90 @@
 
       top: 8px;
 
-      width: 17px;
-      height: 17px;
-
-      background: #feefb8;
-
-      border: 4px solid #fffaf0;
+      width: 15px;
+      height: 15px;
 
       border-radius: 50%;
 
-      box-shadow: 0 0 0 2px #c4dae8;
+      background: var(--butter);
+
+      border: 2px solid var(--cocoa);
     }
 
     .item:nth-child(odd) .dot {
-      right: -9px;
+      right: -8px;
     }
 
     .item:nth-child(even) .dot {
-      left: -9px;
+      left: -8px;
     }
 
     .date {
-      display: inline-block;
-
-      padding: 6px 13px;
-
-      background: #c4dae8;
-
-      border-radius: 999px;
-
       font-family: "Quicksand", sans-serif;
-      font-size: 12px;
-      font-weight: 600;
 
-      margin-bottom: 10px;
+      font-size: 11px;
+
+      letter-spacing: 2px;
+
+      opacity: 0.5;
+
+      margin-bottom: 5px;
     }
 
     h2 {
-      margin: 5px 0 8px;
+      margin: 0 0 15px;
 
       font-size: 22px;
+
       font-weight: 600;
     }
 
-    .text {
-      color: #72534e;
-      font-size: 14px;
-      line-height: 1.9;
+    .photos {
+      display: flex;
+
+      gap: 12px;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
     }
 
     .photo {
-      width: 100%;
-      max-width: 230px;
-      aspect-ratio: 4 / 3;
+      background: white;
 
-      margin-top: 16px;
+      padding: 7px 7px 18px;
 
-      background: #feefb8;
+      box-shadow: 0 7px 18px rgba(67, 47, 46, 0.12);
 
-      border: 8px solid #fffaf0;
-
-      box-shadow:
-        0 5px 12px rgba(67,47,46,.15);
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      color: #8a6860;
-      font-size: 12px;
+      width: min(240px, 100%);
 
       transform: rotate(-2deg);
     }
 
-    .item:nth-child(even) .photo {
+    .photo:nth-child(2) {
       transform: rotate(2deg);
     }
 
-    .photo span {
-      text-align: center;
-      padding: 15px;
+    .photo:nth-child(3) {
+      transform: rotate(-1deg);
+    }
+
+    .photo img {
+      display: block;
+
+      width: 100%;
+
+      aspect-ratio: 4 / 3;
+
+      object-fit: cover;
+    }
+
+    .caption {
+      margin-top: 8px;
+
+      font-size: 12px;
+
+      opacity: 0.55;
     }
 
     .next {
@@ -224,66 +229,60 @@
 
       width: fit-content;
 
-      margin: 10px auto 0;
+      margin: 5px auto 0;
 
-      padding: 12px 25px;
+      padding: 11px 23px;
 
-      background: #feefb8;
-
-      color: #432f2e;
-
-      text-decoration: none;
+      border: 1.5px solid var(--cocoa);
 
       border-radius: 999px;
 
-      box-shadow: 0 5px 0 #d9c98d;
+      color: var(--cocoa);
 
-      font-weight: 600;
+      text-decoration: none;
 
-      transition: .15s ease;
+      font-family: "Quicksand", sans-serif;
+
+      font-size: 13px;
+
+      transition: 0.2s;
     }
 
     .next:hover {
-      transform: translateY(-3px);
+      background: var(--cocoa);
+
+      color: var(--cream);
     }
 
     @media (max-width: 650px) {
-
-      .page {
-        width: 94vw;
-        padding: 55px 20px;
+      .paper {
+        padding: 50px 18px;
       }
 
       .timeline::before {
-        left: 15px;
+        left: 12px;
       }
 
       .item,
+      .item:nth-child(odd),
       .item:nth-child(even) {
         width: 100%;
+
         margin: 0;
-        padding:
-          0 0 45px 45px;
 
-        text-align: left;
-      }
+        padding: 0 0 45px 42px;
 
-      .item:nth-child(odd) {
         text-align: left;
       }
 
       .item:nth-child(odd) .dot,
       .item:nth-child(even) .dot {
-        left: 7px;
+        left: 4px;
         right: auto;
       }
 
       .photo {
-        max-width: 250px;
-      }
-
-      .title {
-        margin-bottom: 40px;
+        width: 100%;
       }
     }
   </style>
@@ -291,67 +290,45 @@
 
 <body>
 
-  <div class="top-menu">
-    OUR LITTLE STORY ♡
-  </div>
-
-
-  <main class="page">
+  <main class="paper">
 
     <div class="tape"></div>
 
-
-    <div class="title">
-
-      <small>
-        the little moments that became our story
-      </small>
-
-      <h1>
-        Our Timeline
-      </h1>
-
-      <div class="yellow-line"></div>
-
+    <div class="label">
+      OUR LITTLE STORY ♡
     </div>
 
+    <h1>
+      Our Timeline
+    </h1>
 
     <div class="timeline">
 
-
-      <!-- 1 -->
-
-      <div class="item">
-
+      <!-- 01 -->
+      <section class="item">
         <div class="dot"></div>
 
         <div class="date">
-          THE DAY WE MET
+          THE BEGINNING
         </div>
 
         <h2>
-          วันที่เราได้พบกัน
+          The Day We Met
         </h2>
 
-        <div class="text">
-          จุดเริ่มต้นเล็ก ๆ
-          ที่ทำให้เรื่องราวของเราเกิดขึ้น
+        <div class="photos">
+          <div class="photo">
+            <img src="assets/images/day-we-met.jpg" alt="The Day We Met">
+            <div class="caption">
+              the day it all began ♡
+            </div>
+          </div>
         </div>
-
-        <div class="photo">
-          <span>
-            📷<br>
-            ใส่รูปตรงนี้
-          </span>
-        </div>
-
-      </div>
+      </section>
 
 
-      <!-- 2 -->
-
-      <div class="item">
-
+      <!-- 02 -->
+      <section class="item">
         <div class="dot"></div>
 
         <div class="date">
@@ -359,28 +336,22 @@
         </div>
 
         <h2>
-          คำทักทายแรก
+          The First Hello
         </h2>
 
-        <div class="text">
-          บางทีคำธรรมดา ๆ
-          ก็อาจกลายเป็นจุดเริ่มต้นของเรื่องราวพิเศษ
+        <div class="photos">
+          <div class="photo">
+            <img src="assets/images/first-hello.jpg" alt="The First Hello">
+            <div class="caption">
+              our first hello
+            </div>
+          </div>
         </div>
-
-        <div class="photo">
-          <span>
-            📷<br>
-            ใส่รูปตรงนี้
-          </span>
-        </div>
-
-      </div>
+      </section>
 
 
-      <!-- 3 -->
-
-      <div class="item">
-
+      <!-- 03 -->
+      <section class="item">
         <div class="dot"></div>
 
         <div class="date">
@@ -388,57 +359,45 @@
         </div>
 
         <h2>
-          สายแรกของเรา
+          The First Call
         </h2>
 
-        <div class="text">
-          วันที่เราได้ยินเสียงของกันและกัน
-          เป็นครั้งแรก
+        <div class="photos">
+          <div class="photo">
+            <img src="assets/images/first-call.jpg" alt="The First Call">
+            <div class="caption">
+              hearing your voice ♡
+            </div>
+          </div>
         </div>
-
-        <div class="photo">
-          <span>
-            📷<br>
-            ใส่รูปตรงนี้
-          </span>
-        </div>
-
-      </div>
+      </section>
 
 
-      <!-- 4 -->
-
-      <div class="item">
-
+      <!-- 04 -->
+      <section class="item">
         <div class="dot"></div>
 
         <div class="date">
-          I STARTED FALLING
+          SOMETHING CHANGED
         </div>
 
         <h2>
-          วันที่ฉันเริ่มตกหลุมรักเธอ
+          The Day I Started Falling for You
         </h2>
 
-        <div class="text">
-          ไม่รู้ว่าตอนไหน
-          แต่รู้ตัวอีกที เธอก็กลายเป็นคนสำคัญไปแล้ว
+        <div class="photos">
+          <div class="photo">
+            <img src="assets/images/started-falling.jpg" alt="The Day I Started Falling for You">
+            <div class="caption">
+              the day my heart knew
+            </div>
+          </div>
         </div>
-
-        <div class="photo">
-          <span>
-            📷<br>
-            ใส่รูปตรงนี้
-          </span>
-        </div>
-
-      </div>
+      </section>
 
 
-      <!-- 5 -->
-
-      <div class="item">
-
+      <!-- 05 -->
+      <section class="item">
         <div class="dot"></div>
 
         <div class="date">
@@ -446,106 +405,78 @@
         </div>
 
         <h2>
-          เดตแรกของเรา
+          Our First Date
         </h2>
 
-        <div class="text">
-          วันธรรมดาที่กลายเป็นหนึ่งในความทรงจำที่ฉันชอบที่สุด
+        <div class="photos">
+
+          <div class="photo">
+            <img src="assets/images/first-date-1.jpg" alt="Our First Date">
+          </div>
+
+          <div class="photo">
+            <img src="assets/images/first-date-2.jpg" alt="Our First Date">
+          </div>
+
         </div>
-
-        <div class="photo">
-          <span>
-            📷<br>
-            รูปเดตแรก รูปที่ 1
-          </span>
-        </div>
-
-        <div class="photo">
-          <span>
-            📷<br>
-            รูปเดตแรก รูปที่ 2
-          </span>
-        </div>
-
-      </div>
+      </section>
 
 
-      <!-- 6 -->
-
-      <div class="item">
-
+      <!-- 06 -->
+      <section class="item">
         <div class="dot"></div>
 
         <div class="date">
-          THE DAY WE BECAME US
+          WE BECAME US
         </div>
 
         <h2>
-          วันที่เราเป็นเรา
+          The Day We Became Us
         </h2>
 
-        <div class="text">
-          วันที่ความสัมพันธ์ของเรา
-          กลายเป็นเรื่องจริง
+        <div class="photos">
+          <div class="photo">
+            <img src="assets/images/became-us.jpg" alt="The Day We Became Us">
+            <div class="caption">
+              and then there was us ♡
+            </div>
+          </div>
         </div>
-
-        <div class="photo">
-          <span>
-            📷<br>
-            ใส่รูปตรงนี้
-          </span>
-        </div>
-
-      </div>
+      </section>
 
 
-      <!-- 7 -->
-
-      <div class="item">
-
+      <!-- 07 -->
+      <section class="item">
         <div class="dot"></div>
 
         <div class="date">
-          OUR FAVORITE MEMORY
+          OUR FAVORITE
         </div>
 
         <h2>
-          ความทรงจำที่เราชอบ
+          Our Favorite Memory
         </h2>
 
-        <div class="text">
-          ความทรงจำเล็ก ๆ
-          ที่อยากเก็บเอาไว้นาน ๆ
+        <div class="photos">
+
+          <div class="photo">
+            <img src="assets/images/favorite-memory-1.jpg" alt="Our Favorite Memory">
+          </div>
+
+          <div class="photo">
+            <img src="assets/images/favorite-memory-2.jpg" alt="Our Favorite Memory">
+          </div>
+
+          <div class="photo">
+            <img src="assets/images/favorite-memory-3.jpg" alt="Our Favorite Memory">
+          </div>
+
         </div>
-
-        <div class="photo">
-          <span>
-            📷<br>
-            รูปความทรงจำที่ 1
-          </span>
-        </div>
-
-        <div class="photo">
-          <span>
-            📷<br>
-            รูปความทรงจำที่ 2
-          </span>
-        </div>
-
-        <div class="photo">
-          <span>
-            📷<br>
-            รูปความทรงจำที่ 3
-          </span>
-        </div>
-
-      </div>
+      </section>
 
 
-      <!-- 8 -->
-
-      <div class="item">
-
+      <!-- 08 -->
+      <section class="item">
         <div class="dot"></div>
 
         <div class="date">
@@ -553,36 +484,26 @@
         </div>
 
         <h2>
-          วันนี้
+          Today
         </h2>
 
-        <div class="text">
-          และเรื่องราวของเราก็ยังคงดำเนินต่อไป ♡
-        </div>
+        <div class="photos">
 
-        <div class="photo">
-          <span>
-            📷<br>
-            รูปปัจจุบัน รูปที่ 1
-          </span>
-        </div>
+          <div class="photo">
+            <img src="assets/images/today-1.jpg" alt="Today">
+          </div>
 
-        <div class="photo">
-          <span>
-            📷<br>
-            รูปปัจจุบัน รูปที่ 2
-          </span>
-        </div>
+          <div class="photo">
+            <img src="assets/images/today-2.jpg" alt="Today">
+          </div>
 
-      </div>
+        </div>
+      </section>
 
     </div>
 
-
-    <a
-      href="memories.html"
-      class="next">
-      ไปดูความทรงจำของเราต่อ ♡
+    <a href="memories.html" class="next">
+      ไปต่อ → Our Memories
     </a>
 
   </main>
