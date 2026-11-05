@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Forever ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #c4dae8;
+      --butter: #feefb8;
+      --cocoa: #432f2e;
+      --cream: #fffaf0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.5) 0 2px, transparent 3px),
+        var(--blue);
+
+      color: var(--cocoa);
+
+      font-family: "Mali", cursive;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 24px;
+    }
+
+    .paper {
+      position: relative;
+
+      width: min(720px, 100%);
+
+      background: var(--cream);
+
+      padding: 70px 30px 60px;
+
+      text-align: center;
+
+      border-radius: 4px;
+
+      box-shadow:
+        0 18px 40px rgba(67, 47, 46, 0.15),
+        0 3px 0 rgba(67, 47, 46, 0.08);
+
+      transform: rotate(-0.5deg);
+    }
+
+    .tape {
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-2deg);
+
+      width: 150px;
+      height: 38px;
+
+      background: rgba(254, 239, 184, 0.85);
+
+      opacity: 0.9;
+    }
+
+    .small {
+      font-family: "Quicksand", sans-serif;
+
+      font-size: 13px;
+      letter-spacing: 3px;
+
+      margin-bottom: 28px;
+
+      opacity: 0.65;
+    }
+
+    h1 {
+      margin: 0;
+
+      font-size: clamp(34px, 8vw, 64px);
+
+      font-weight: 600;
+
+      line-height: 1.2;
+    }
+
+    .heart {
+      display: inline-block;
+
+      margin: 22px 0;
+
+      font-size: 34px;
+
+      animation: heartbeat 1.5s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.18);
+      }
+    }
+
+    .message {
+      max-width: 500px;
+
+      margin: 0 auto;
+
+      font-size: 17px;
+
+      line-height: 2;
+
+      opacity: 0.85;
+    }
+
+    .forever {
+      margin-top: 35px;
+
+      font-size: 25px;
+
+      font-weight: 600;
+    }
+
+    .signature {
+      margin-top: 12px;
+
+      font-family: "Quicksand", sans-serif;
+
+      font-size: 13px;
+
+      opacity: 0.55;
+
+      letter-spacing: 1px;
+    }
+
+    .back {
+      display: inline-block;
+
+      margin-top: 40px;
+
+      padding: 10px 22px;
+
+      border: 1.5px solid var(--cocoa);
+
+      border-radius: 999px;
+
+      color: var(--cocoa);
+
+      text-decoration: none;
+
+      font-family: "Quicksand", sans-serif;
+
+      font-size: 13px;
+
+      transition: 0.2s;
+    }
+
+    .back:hover {
+      background: var(--cocoa);
+      color: var(--cream);
+    }
+
+    .doodle {
+      position: absolute;
+
+      font-size: 22px;
+
+      opacity: 0.5;
+    }
+
+    .doodle.one {
+      top: 35px;
+      left: 35px;
+      transform: rotate(-15deg);
+    }
+
+    .doodle.two {
+      top: 45px;
+      right: 40px;
+      transform: rotate(12deg);
+    }
+
+    .doodle.three {
+      bottom: 35px;
+      left: 45px;
+      transform: rotate(10deg);
+    }
+
+    .doodle.four {
+      bottom: 30px;
+      right: 40px;
+      transform: rotate(-12deg);
+    }
+
+    @media (max-width: 500px) {
+      body {
+        padding: 16px;
+      }
+
+      .paper {
+        padding: 60px 22px 45px;
+      }
+
+      .message {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="paper">
+
+    <div class="tape"></div>
+
+    <div class="doodle one">♡</div>
+    <div class="doodle two">✦</div>
+    <div class="doodle three">♡</div>
+    <div class="doodle four">✦</div>
+
+    <div class="small">
+      OUR LITTLE STORY
+    </div>
+
+    <h1>
+      And I would<br>
+      still choose you.
+    </h1>
+
+    <div class="heart">
+      ♡
+    </div>
+
+    <p class="message">
+      ไม่ว่าจะผ่านไปกี่วัน<br>
+      ไม่ว่าจะมีเรื่องราวเกิดขึ้นอีกมากมาย<br>
+      ถ้าให้ฉันเลือกอีกครั้ง<br>
+      ฉันก็ยังเลือกเธออยู่ดี
+    </p>
+
+    <div class="forever">
+      Always you. ♡
+    </div>
+
+    <div class="signature">
+      made with love
+    </div>
+
+    <a href="index.html" class="back">
+      ↶ กลับไปหน้าแรก
+    </a>
+
+  </main>
+
+</body>
+</html>
