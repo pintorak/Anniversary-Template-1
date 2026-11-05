@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Love Letter ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,.75) 0 3px, transparent 4px),
+        radial-gradient(circle at 85% 35%, rgba(255,255,255,.7) 0 3px, transparent 4px),
+        #c4dae8;
+
+      color: #432f2e;
+      font-family: "Mali", cursive;
+    }
+
+    .top-menu {
+      width: fit-content;
+      margin: 28px auto 0;
+      padding: 10px 22px;
+
+      background: rgba(255,250,240,.9);
+
+      border: 2px solid rgba(67,47,46,.1);
+      border-radius: 999px;
+
+      box-shadow: 0 5px 0 rgba(67,47,46,.08);
+
+      font-family: "Quicksand", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .page {
+      min-height: calc(100vh - 80px);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 50px 20px 70px;
+    }
+
+    .letter-paper {
+      position: relative;
+
+      width: min(760px, 94vw);
+
+      background: #fffaf0;
+
+      padding: 70px 60px 65px;
+
+      box-shadow:
+        0 18px 35px rgba(67,47,46,.15),
+        0 3px 0 rgba(67,47,46,.08);
+
+      transform: rotate(-.5deg);
+    }
+
+    .tape {
+      position: absolute;
+
+      width: 110px;
+      height: 35px;
+
+      top: -17px;
+      left: 50%;
+
+      transform: translateX(-50%) rotate(2deg);
+
+      background: rgba(254,239,184,.9);
+    }
+
+    .heart {
+      position: absolute;
+
+      top: 40px;
+      right: 40px;
+
+      font-size: 30px;
+
+      color: #8a6860;
+
+      transform: rotate(12deg);
+    }
+
+    .title {
+      text-align: center;
+
+      margin-bottom: 38px;
+    }
+
+    .title small {
+      color: #8a6860;
+      font-size: 14px;
+    }
+
+    h1 {
+      margin: 8px 0 12px;
+
+      font-size: clamp(38px, 7vw, 65px);
+
+      font-weight: 600;
+    }
+
+    .yellow-line {
+      width: 115px;
+      height: 8px;
+
+      margin: auto;
+
+      background: #feefb8;
+
+      border-radius: 50%;
+
+      transform: rotate(-2deg);
+    }
+
+    .letter {
+      max-width: 590px;
+
+      margin: auto;
+
+      color: #5f4541;
+
+      font-size: 16px;
+
+      line-height: 2.15;
+    }
+
+    .letter p {
+      margin: 0 0 22px;
+    }
+
+    .salutation {
+      font-size: 20px;
+
+      color: #432f2e;
+
+      margin-bottom: 25px !important;
+    }
+
+    .ending {
+      text-align: right;
+
+      margin-top: 35px !important;
+
+      color: #72534e;
+    }
+
+    .signature {
+      font-size: 23px;
+
+      color: #432f2e;
+    }
+
+    .next {
+      display: block;
+
+      width: fit-content;
+
+      margin: 42px auto 0;
+
+      padding: 12px 25px;
+
+      background: #feefb8;
+
+      color: #432f2e;
+
+      text-decoration: none;
+
+      border-radius: 999px;
+
+      box-shadow: 0 5px 0 #d9c98d;
+
+      font-weight: 600;
+
+      transition: .15s ease;
+    }
+
+    .next:hover {
+      transform: translateY(-3px) rotate(-1deg);
+    }
+
+    @media (max-width: 600px) {
+
+      .top-menu {
+        margin-top: 18px;
+        font-size: 11px;
+        padding: 9px 17px;
+      }
+
+      .page {
+        padding: 40px 14px 55px;
+      }
+
+      .letter-paper {
+        width: 95vw;
+        padding: 60px 25px 50px;
+      }
+
+      .heart {
+        right: 25px;
+        top: 32px;
+      }
+
+      .letter {
+        font-size: 14px;
+        line-height: 2;
+      }
+
+      .salutation {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-menu">
+    OUR LITTLE STORY ♡
+  </div>
+
+
+  <main class="page">
+
+    <div class="letter-paper">
+
+      <div class="tape"></div>
+
+      <div class="heart">
+        ♡
+      </div>
+
+
+      <div class="title">
+
+        <small>
+          something I want you to know
+        </small>
+
+        <h1>
+          Love Letter
+        </h1>
+
+        <div class="yellow-line"></div>
+
+      </div>
+
+
+      <div class="letter">
+
+        <p class="salutation">
+          ถึงคนที่ฉันรัก ♡
+        </p>
+
+
+        <p>
+          ถ้าเธอกำลังอ่านจดหมายนี้อยู่
+          ฉันอยากให้เธอรู้ว่า
+          ฉันตั้งใจเขียนทุกคำลงไปจริง ๆ
+        </p>
+
+
+        <p>
+          ขอบคุณที่เข้ามาเป็นส่วนหนึ่ง
+          ในชีวิตของฉัน
+          ขอบคุณสำหรับทุกช่วงเวลาที่เราได้มีร่วมกัน
+          ทั้งวันที่มีความสุข
+          วันที่คิดถึงกัน
+          และแม้แต่วันที่เราอาจจะไม่เข้าใจกัน
+        </p>
+
+
+        <p>
+          ฉันอาจไม่ได้เป็นคนที่เก่งที่สุด
+          ในการพูดหรือแสดงความรู้สึก
+          แต่สิ่งหนึ่งที่ฉันอยากให้เธอรู้เสมอคือ
+          ฉันรักเธอมากจริง ๆ
+        </p>
+
+
+        <p>
+          ฉันชอบเวลาที่เราได้หัวเราะด้วยกัน
+          ชอบเวลาที่เราได้คุยกันเรื่องเล็ก ๆ
+          และชอบความรู้สึกที่รู้ว่า
+          ไม่ว่าเราจะอยู่ไกลกันแค่ไหน
+          ก็ยังมีใครอีกคนอยู่ตรงนั้น
+        </p>
+
+
+        <p>
+          ขอบคุณที่ยังอยู่ในเรื่องราวของฉัน
+          และขอบคุณที่ทำให้คำว่า
+          “เรา”
+          มีความหมายมากขึ้นทุกวัน
+        </p>
+
+
+        <p>
+          ฉันไม่รู้ว่าอนาคตจะพาเราไปเจออะไรบ้าง
+          แต่ถ้ายังมีโอกาส
+          ฉันก็อยากค่อย ๆ สร้างความทรงจำ
+          กับเธอไปอีกเรื่อย ๆ
+        </p>
+
+
+        <p class="ending">
+
+          รักเธอเสมอ ♡<br>
+
+          <span class="signature">
+            จากคนที่เลือกเธอ
+          </span>
+
+        </p>
+
+      </div>
+
+
+      <a
+        href="song.html"
+        class="next">
+        ไปฟังเพลงของเรากัน ♡
+      </a>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
