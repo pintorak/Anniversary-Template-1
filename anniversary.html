@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Anniversary ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      background:
+        radial-gradient(circle at 12% 18%, rgba(255,255,255,.8) 0 3px, transparent 4px),
+        radial-gradient(circle at 85% 25%, rgba(255,255,255,.7) 0 3px, transparent 4px),
+        #c4dae8;
+
+      color: #432f2e;
+      font-family: "Mali", cursive;
+    }
+
+    /* TOP MENU */
+
+    .top-menu {
+      width: fit-content;
+      margin: 28px auto 0;
+
+      padding: 10px 22px;
+
+      background: rgba(255,250,240,.9);
+
+      border-radius: 999px;
+
+      border: 2px solid rgba(67,47,46,.1);
+
+      box-shadow: 0 5px 0 rgba(67,47,46,.08);
+
+      font-family: "Quicksand", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .5px;
+    }
+
+    /* PAGE */
+
+    .page {
+      min-height: calc(100vh - 80px);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 45px 20px 70px;
+    }
+
+    /* PAPER */
+
+    .paper {
+      position: relative;
+
+      width: min(800px, 94vw);
+
+      min-height: 600px;
+
+      padding: 70px 50px;
+
+      background: #fffaf0;
+
+      transform: rotate(.5deg);
+
+      box-shadow:
+        0 18px 35px rgba(67,47,46,.15),
+        0 3px 0 rgba(67,47,46,.08);
+
+      border: 1px solid rgba(67,47,46,.08);
+    }
+
+    /* TAPE */
+
+    .tape {
+      position: absolute;
+
+      width: 110px;
+      height: 35px;
+
+      top: -16px;
+      left: 50%;
+
+      transform: translateX(-50%) rotate(2deg);
+
+      background: rgba(254,239,184,.9);
+
+      box-shadow: 0 2px 5px rgba(67,47,46,.08);
+    }
+
+    /* DECORATION */
+
+    .heart {
+      position: absolute;
+
+      top: 42px;
+      right: 45px;
+
+      font-size: 30px;
+
+      color: #8a6860;
+
+      transform: rotate(12deg);
+    }
+
+    .star {
+      position: absolute;
+
+      bottom: 45px;
+      left: 45px;
+
+      font-size: 24px;
+
+      color: #8a6860;
+
+      transform: rotate(-12deg);
+    }
+
+    /* CONTENT */
+
+    .content {
+      max-width: 620px;
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .little {
+      color: #8a6860;
+
+      font-size: 14px;
+
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+
+      font-size: clamp(38px, 8vw, 70px);
+
+      line-height: 1.25;
+
+      font-weight: 600;
+
+      color: #432f2e;
+    }
+
+    .yellow-line {
+      width: 130px;
+      height: 9px;
+
+      background: #feefb8;
+
+      border-radius: 50%;
+
+      margin: 18px auto 30px;
+
+      transform: rotate(-2deg);
+    }
+
+    .message {
+      font-size: clamp(17px, 3vw, 23px);
+
+      line-height: 2;
+
+      color: #654945;
+
+      margin: 0 auto 32px;
+    }
+
+    /* COUNTER */
+
+    .counter {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding: 13px 23px;
+
+      background: #c4dae8;
+
+      border-radius: 999px;
+
+      box-shadow: 0 5px 0 #9eb9c9;
+
+      font-family: "Quicksand", sans-serif;
+
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    #days {
+      font-size: 23px;
+
+      color: #432f2e;
+    }
+
+    /* BUTTON */
+
+    .next-button {
+      display: inline-block;
+
+      margin-top: 42px;
+
+      padding: 12px 27px;
+
+      background: #feefb8;
+
+      color: #432f2e;
+
+      text-decoration: none;
+
+      border-radius: 999px;
+
+      font-size: 15px;
+      font-weight: 600;
+
+      box-shadow:
+        0 5px 0 #d9c98d,
+        0 8px 14px rgba(67,47,46,.1);
+
+      transition: .15s ease;
+    }
+
+    .next-button:hover {
+      transform: translateY(-3px) rotate(-1deg);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      .top-menu {
+        margin-top: 18px;
+
+        font-size: 11px;
+
+        padding: 9px 17px;
+      }
+
+      .page {
+        padding: 35px 14px 50px;
+      }
+
+      .paper {
+        width: 95vw;
+
+        min-height: 560px;
+
+        padding: 65px 25px 50px;
+      }
+
+      .heart {
+        top: 30px;
+        right: 25px;
+      }
+
+      .star {
+        bottom: 30px;
+        left: 25px;
+      }
+
+      .message {
+        line-height: 1.9;
+      }
+
+      .counter {
+        padding: 11px 18px;
+        font-size: 13px;
+      }
+
+      #days {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP MENU -->
+
+  <div class="top-menu">
+    OUR LITTLE STORY ♡
+  </div>
+
+
+  <!-- PAGE -->
+
+  <main class="page">
+
+    <div class="paper">
+
+      <div class="tape"></div>
+
+      <div class="heart">♡</div>
+
+      <div class="star">☆</div>
+
+
+      <div class="content">
+
+        <div class="little">
+          our little celebration
+        </div>
+
+        <h1>
+          Happy Anniversary ♡
+        </h1>
+
+        <div class="yellow-line"></div>
+
+        <p class="message">
+          ขอบคุณที่เข้ามาเป็นส่วนหนึ่ง<br>
+          ของเรื่องราวที่แสนพิเศษของเรา
+        </p>
+
+
+        <div class="counter">
+
+          <span>
+            เราอยู่ด้วยกันมาแล้ว
+          </span>
+
+          <span id="days">
+            0
+          </span>
+
+          <span>
+            วัน ♡
+          </span>
+
+        </div>
+
+
+        <br>
+
+
+        <a
+          href="timeline.html"
+          class="next-button">
+          ไปดูเรื่องราวของเรากันต่อ ♡
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <script>
+
+    /*
+      วันที่เริ่มคบกัน
+      8 October 2025
+    */
+
+    const startDate = new Date("2025-10-08T00:00:00");
+
+    const today = new Date();
+
+    const difference =
+      today - startDate;
+
+    const days =
+      Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+      );
+
+    document.getElementById("days").textContent =
+      days;
+
+  </script>
+
+</body>
+</html>
